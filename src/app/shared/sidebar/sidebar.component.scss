@@ -1,0 +1,26 @@
+.sidebar {
+  .profile {
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+
+    &--title {
+      font-weight: bold;
+    }
+
+    &--subtitle {
+      font-size: 0.8em;
+    }
+
+    &--avatar {
+      margin-top: 1rem;
+      border-radius: 50%;
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+
+  .active-link {
+    background: rgba(0, 0, 0, 0.04);
+  }
+}

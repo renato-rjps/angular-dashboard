@@ -1,0 +1,42 @@
+<mat-toolbar color="primary"
+             class="mat-elevation-z8"
+             fxLayout
+             fxLayoutAlign="space-between center">
+
+  <div fxLayout
+       fxLayoutAlign="center center">
+    <button mat-icon-button
+            aria-label="Side Bar"
+            matTooltip="Side Bar"
+            (click)="onToogleSideBar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Angular Material Dashboard Sample</h1>
+  </div>
+
+  <div class="toolbar--menu">
+    <button mat-icon-button
+            aria-label="Settings"
+            matTooltip="Settings">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button mat-icon-button
+            aria-label="Help"
+            matTooltip="Help">
+      <mat-icon>help_outline</mat-icon>
+    </button>
+    <button mat-icon-button
+            [matMenuTriggerFor]="userMenu"
+            aria-label="Menu"
+            matTooltip="User menu">
+      <mat-icon>person_outline</mat-icon>
+    </button>
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+
+
+  </div>
+</mat-toolbar>

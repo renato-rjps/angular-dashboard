@@ -1,0 +1,14 @@
+<app-header (sidebarToggle)="snav.toggle()"></app-header>
+<mat-drawer-container>
+  <mat-drawer #snav
+              mode="side"
+              opened>
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+  </mat-drawer-content>
+</mat-drawer-container>

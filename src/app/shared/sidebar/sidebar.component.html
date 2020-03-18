@@ -1,0 +1,33 @@
+<div class="sidebar">
+  <!--Profile-->
+  <div class="profile">
+    <div class="profile--header">
+      <div class="profile--title">Renato Santos</div>
+      <div class="profile--subtitle">renato@example.com</div>
+    </div>
+
+    <img class="profile--avatar"
+         src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+         alt="User Avatar">
+  </div>
+  <!-- / Profile-->
+
+  <mat-divider></mat-divider>
+
+  <!-- Menu -->
+  <mat-nav-list>
+    <mat-list-item routerLinkActive="active-link"
+                   routerLink="/">
+      Dashboard
+    </mat-list-item>
+    <mat-list-item routerLinkActive="active-link"
+                   routerLink="/posts">
+      Posts
+    </mat-list-item>
+    <mat-list-item routerLinkActive="active-link"
+                   routerLink="/articles">
+      Articles
+    </mat-list-item>
+  </mat-nav-list>
+  <!-- / Menu -->
+</div>
