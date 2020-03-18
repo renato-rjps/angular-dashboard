@@ -9,7 +9,8 @@ export class WidgetAreaComponent {
   Highcharts: typeof Highcharts = Highcharts;
   chartOptions: Highcharts.Options = {
     chart: {
-      type: 'area'
+      type: 'area',
+      width: 800
     },
     title: {
       text: 'Area chart with negative values'

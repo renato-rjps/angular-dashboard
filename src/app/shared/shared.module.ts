@@ -12,6 +12,7 @@ import { WidgetPieComponent } from './widgets/widget-pie/widget-pie.component';
 import { WidgetTableComponent } from './widgets/widget-table/widget-table.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { ChartModule } from 'angular-highcharts';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 const COMPONETS = [
   HeaderComponent,
@@ -34,7 +35,8 @@ const MODULES = [
   imports: [
     [...MODULES],
     HighchartsChartModule,
-    ChartModule
+    ChartModule,
+    NgxChartsModule
   ],
   exports: [...COMPONETS, ...MODULES]
 })

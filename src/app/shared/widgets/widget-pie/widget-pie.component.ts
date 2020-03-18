@@ -1,38 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { Chart } from 'angular-highcharts';
+import { Component, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'app-widget-pie',
   templateUrl: './widget-pie.component.html',
   styleUrls: ['./widget-pie.component.scss']
 })
-export class WidgetPieComponent implements OnInit {
+export class WidgetPieComponent {
 
-  chart: Chart;
-
-  ngOnInit() {
-    this.init();
+  single: any[] = [
+    {
+      'name': 'Germany',
+      'value': 8940000
+    },
+    {
+      'name': 'USA',
+      'value': 5000000
+    },
+    {
+      'name': 'France',
+      'value': 7200000
+    },
+    {
+      'name': 'UK',
+      'value': 6200000
+    }
+  ];
+  constructor() {
   }
-
-  init() {
-    let chart = new Chart({
-      chart: {
-        type: 'line'
-      },
-      title: {
-        text: 'Linechart'
-      },
-      credits: {
-        enabled: false
-      },
-      series: [{
-        name: 'Line 1',
-        data: [1, 2, 3],
-        type: 'line'
-      }]
-    });
-    chart.addPoint(4);
-    this.chart = chart;
-  }
-
 }

@@ -1,3 +1,11 @@
-<mat-card>
-  <div [chart]="chart"></div>
+<mat-card style="height: 100%;">
+  <div style="height: 100%; display: block; ">
+    <ngx-charts-pie-chart [results]="single"
+                          [gradient]="false"
+                          [legend]="false"
+                          [labels]="false"
+                          [doughnut]="true">
+    </ngx-charts-pie-chart>
+  </div>
+
 </mat-card>
