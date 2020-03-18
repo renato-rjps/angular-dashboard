@@ -1,36 +1,41 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { MatDividerModule } from '@angular/material/divider';
+import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { MaterialModule } from './material.module';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { WidgetAreaComponent } from './widgets/widget-area/widget-area.component';
+import { WidgetCardComponent } from './widgets/widget-card/widget-card.component';
+import { WidgetPieComponent } from './widgets/widget-pie/widget-pie.component';
+import { WidgetTableComponent } from './widgets/widget-table/widget-table.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { ChartModule } from 'angular-highcharts';
 
+const COMPONETS = [
+  HeaderComponent,
+  FooterComponent,
+  SidebarComponent,
+  WidgetAreaComponent,
+  WidgetCardComponent,
+  WidgetPieComponent,
+  WidgetTableComponent
+];
+
+const MODULES = [
+  CommonModule,
+  FlexLayoutModule,
+  RouterModule,
+  MaterialModule
+];
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, SidebarComponent],
-  exports: [HeaderComponent, FooterComponent, SidebarComponent],
+  declarations: [COMPONETS],
   imports: [
-    CommonModule,
-    FlexLayoutModule,
-    RouterModule,
-
-    // Material
-    MatDividerModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    MatListModule,
-    MatTooltipModule
-  ]
+    [...MODULES],
+    HighchartsChartModule,
+    ChartModule
+  ],
+  exports: [...COMPONETS, ...MODULES]
 })
 export class SharedModule { }

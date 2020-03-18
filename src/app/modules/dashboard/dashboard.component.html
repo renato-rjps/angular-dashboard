@@ -1,1 +1,35 @@
-<p>dashboard works!</p>
+<app-widget-area></app-widget-area>
+
+<mat-divider></mat-divider>
+
+<div fxLayout
+     fxLayoutAlign="space-between stretch">
+  <div fxFlex="24">
+    <app-widget-card></app-widget-card>
+  </div>
+
+  <div fxFlex="24">
+    <app-widget-card></app-widget-card>
+  </div>
+
+  <div fxFlex="24">
+    <app-widget-card></app-widget-card>
+  </div>
+
+  <div fxFlex="24">
+    <app-widget-card></app-widget-card>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<div fxLayout
+     fxLayoutAlign="space-between stretch"
+     fxLayoutGap="1.5rem">
+  <div fxFlex="60">
+    <app-widget-table></app-widget-table>
+  </div>
+  <div fxFlex="40">
+    <app-widget-pie></app-widget-pie>
+  </div>
+</div>
